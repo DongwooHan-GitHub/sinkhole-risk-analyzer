@@ -139,7 +139,7 @@ project/
 
 - [ ] 실시간 지도 기반 파손 위치 마커 표시
 - [ ] 예측 위험도 색상별 레벨링 (ex. Green/Yellow/Red)
-- [ ] 관리자용 DB 대시보드 (Streamlit 또는 SQLite Viewer)
+- [ ] 관리자용 DB 대시보드 (JS, CSS, HTML 및 MySQL)
 
 ---
 
