@@ -27,7 +27,7 @@
 |-----------|-------|
 | Pothole   | 8,500 |
 | Sinkhole  | 3,200 |
-| Background / None | 10,000+ |
+| Background / img Aug | 10,000+ |
 
 > 다양한 도로 상황에서 촬영된 실제 이미지 및 합성 이미지로 구성되어 있습니다.
 
@@ -62,6 +62,7 @@
 
 # 🗂️ Directory Structure
 
+```
 project/
 ├── main.py               # FastAPI 서버 실행 및 전체 파이프라인 제어
 ├── upload.html             # 사용자 업로드 UI 페이지 (HTML/CSS/JS)
@@ -85,6 +86,7 @@ project/
 └── logs/                   # 애플리케이션 로그 파일 저장
     ├── app.log
     └── error.log
+```
 
 ## 🔁 전체 서비스 순서도
 
