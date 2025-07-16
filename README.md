@@ -60,7 +60,7 @@
 
 ---
 
-## 🗂️ Directory Structure
+# 🗂️ Directory Structure
 
 project/
 ├── main.py # FastAPI 서버 실행
@@ -69,19 +69,17 @@ project/
 ├── utils.py # 유틸 함수 모음
 ├── db.py # SQLite 연동
 ├── detection_results.db # 탐지 결과 DB
-│
 ├── pothole_api.py # 포트홀 분석 API
 ├── weather_api.py # 기상청 API 호출
 ├── traffic_api.py # 교통 API 호출
 ├── gis_api.py # 도로 속성(GIS) API
 ├── gps_image_api.py # 이미지 + 위치 연동 API
-│
 ├── uploaded_images/ # 사용자 업로드 이미지 저장
 ├── static/ # 정적 파일 (JS, CSS 등)
-├── logs/ # 로그 파일 저장
-│ ├── gis_api.log
-│ ├── traffic_api.log
-│ └── road_gis.log
+└── logs/ # 로그 파일 저장
+├── gis_api.log
+├── traffic_api.log
+└── road_gis.log
 
 
 ---
