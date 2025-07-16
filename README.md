@@ -63,26 +63,28 @@
 # 🗂️ Directory Structure
 
 project/
-├── main.py # FastAPI 서버 실행
-├── upload.html # 사용자 업로드 페이지 (HTML/JS)
-├── detector.py # YOLOv8 객체 탐지 처리
-├── utils.py # 유틸 함수 모음
-├── db.py # SQLite 연동
-├── detection_results.db # 탐지 결과 DB
-├── pothole_api.py # 포트홀 분석 API
-├── weather_api.py # 기상청 API 호출
-├── traffic_api.py # 교통 API 호출
-├── gis_api.py # 도로 속성(GIS) API
-├── gps_image_api.py # 이미지 + 위치 연동 API
-├── uploaded_images/ # 사용자 업로드 이미지 저장
-├── static/ # 정적 파일 (JS, CSS 등)
-└── logs/ # 로그 파일 저장
-├── gis_api.log
-├── traffic_api.log
-└── road_gis.log
-
-
----
+├── main.py               # FastAPI 서버 실행 및 전체 파이프라인 제어
+├── upload.html             # 사용자 업로드 UI 페이지 (HTML/CSS/JS)
+│
+├── detector.py             # YOLOv8 객체 탐지 모델 추론 로직
+├── data_preprocessing.py   # 위험도 분석 및 데이터 전처리 로직
+│
+├── db.py                   # 데이터베이스 세션 관리 및 CRUD 함수
+├── models.py               # SQLAlchemy DB 모델 정의
+├── schemas.py              # Pydantic 데이터 유효성 검사 스키마
+│
+├── api/                    # API 엔드포인트 모음
+│   ├── detection_api.py    # 이미지 분석 API
+│   └── public_data_api.py  # 공공 데이터 연동 API
+│
+├── utils.py                # 공통 유틸리티 함수 모음
+├── config.py               # API 키, DB 정보 등 환경 설정
+│
+├── static/                 # CSS, JS 등 정적 파일 저장
+├── uploaded_images/        # 사용자가 업로드한 원본 및 분석 이미지 저장
+└── logs/                   # 애플리케이션 로그 파일 저장
+    ├── app.log
+    └── error.log
 
 ## 🔁 전체 서비스 순서도
 
